@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Archives
+*.rar
+*.zip
+*.7z
+*.tar.gz
+
+# System & temporary files
+.DS_Store
+Thumbs.db
+*.log
+scratch/
+.tmp/
+
+# IDE files
+.idea/
+*.swp

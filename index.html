@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Cutie Dudu ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --silver: #e7e4e9;
+  --red: #d92840;
+  --pink: #ff6378;
+  --dark: #08080b;
+}
+
+body {
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse at 50% 40%, #2a1a1f 0%, transparent 60%),
+    linear-gradient(135deg, #0a0709, #151014, #080608);
+  color: var(--silver);
+  font-family: 'Playfair Display', Georgia, serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background-image:
+    linear-gradient(rgba(200,200,200,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,200,200,0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  z-index: 0;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 7px white, 0 0 14px #ff6378;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .1; transform: scale(.5); }
+  to { opacity: 1; transform: scale(1.5); }
+}
+
+/* Floating doodles */
+.doodle {
+  position: fixed;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255,70,100,.6));
+  opacity: 0.8;
+}
+
+.d1 { top: 6%; left: 5%; font-size: 38px; color: #fff; }
+.d2 { top: 8%; right: 8%; font-size: 42px; animation-delay: 1s; color: #ff6378; }
+.d3 { bottom: 10%; left: 6%; font-size: 38px; animation-delay: 2s; }
+.d4 { bottom: 12%; right: 5%; font-size: 44px; animation-delay: .5s; color: #ff6378; }
+.d5 { top: 45%; left: 2%; font-size: 26px; }
+.d6 { top: 48%; right: 2%; font-size: 30px; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-18px) rotate(8deg); }
+}
+
+/* Scrapbook elements */
+.scrapbook {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.polaroid {
+  position: absolute;
+  background: #fafafa;
+  padding: 8px 8px 28px 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,255,0.1);
+  transform: rotate(-3deg);
+  border: 1px solid #ddd;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #111;
+}
+
+.polaroid-left {
+  top: 20%;
+  left: 2%;
+  width: 140px;
+  height: 160px;
+  transform: rotate(-8deg);
+}
+
+.polaroid-right {
+  top: 28%;
+  right: 2%;
+  width: 150px;
+  height: 170px;
+  transform: rotate(6deg);
+}
+
+/* Mock images using gradients since we can't load external images */
+.img-placeholder-1 {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 40%, #2a1518, #0a0506);
+  position: relative;
+}
+.img-placeholder-1::after {
+  content: "🌹";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.img-placeholder-2 {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #2a1518, #0a0506);
+  position: relative;
+}
+.img-placeholder-2::after {
+  content: "♥";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #ff3045;
+  text-shadow: 0 0 20px #ff3045;
+}
+
+/* Tape effect */
+.polaroid::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 60px;
+  height: 20px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Sticky note top left */
+.sticky-note {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  width: 140px;
+  padding: 15px 12px;
+  background: #f5e6d3;
+  color: #1a1a1a;
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  line-height: 1.3;
+  transform: rotate(-6deg);
+  box-shadow: 2px 5px 15px rgba(0,0,0,0.6);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.sticky-note::before {
+  content: "📌";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+/* Sticky note bottom right */
+.sticky-note-bottom {
+  position: absolute;
+  bottom: 10%;
+  right: 3%;
+  width: 160px;
+  padding: 15px 12px;
+  background: #f5e6d3;
+  color: #1a1a1a;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.3;
+  transform: rotate(5deg);
+  box-shadow: 2px 5px 15px rgba(0,0,0,0.6);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.sticky-note-bottom::before {
+  content: "📌";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  transform: rotate(15deg);
+  font-size: 20px;
+}
+
+/* Little lantern */
+.lantern {
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 100px;
+  height: 140px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.lantern-body {
+  width: 70px;
+  height: 80px;
+  background: linear-gradient(to bottom, #6b2a35, #3a151c);
+  border-radius: 5px;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #888;
+  box-shadow: 0 0 25px #ff3045, inset 0 0 20px #ff3045;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lantern-body::before {
+  content: "♥";
+  font-size: 28px;
+  color: #ff3045;
+  text-shadow: 0 0 15px #ff3045, 0 0 30px #ff3045;
+}
+
+.lantern-top {
+  width: 30px;
+  height: 20px;
+  background: #555;
+  margin: 0 auto;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #777;
+}
+
+.lantern-handle {
+  width: 40px;
+  height: 15px;
+  border: 2px solid #777;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  margin: 0 auto;
+}
+
+.lantern-base {
+  width: 80px;
+  height: 15px;
+  background: #444;
+  margin: 0 auto;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #666;
+}
+
+.lantern-glow {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 60%, rgba(255,48,69,0.3), transparent 70%);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+/* Book and rose at bottom left */
+.book-rose {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.book {
+  width: 120px;
+  height: 30px;
+  background: linear-gradient(to bottom, #3a1a1f, #1a0a0d);
+  border-radius: 3px;
+  border: 1px solid #5a2a35;
+  position: relative;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  right: 5px;
+  height: 5px;
+  background: #4a2028;
+  border-radius: 2px;
+}
+
+.rose {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 45px;
+  filter: drop-shadow(0 0 10px #d92840);
+  transform: rotate(-15deg);
+}
+
+/* Pen bottom right */
+.pen {
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(-30deg);
+  font-size: 50px;
+  filter: drop-shadow(0 0 8px rgba(255,48,69,0.5));
+}
+
+/* Main Container */
+.container {
+  min-height: 100vh;
+  position: relative;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  padding: 45px 35px 35px;
+  text-align: center;
+  background: rgba(8, 8, 11, .75);
+  border: 1px solid rgba(200, 195, 205, .4);
+  border-radius: 5px;
+  box-shadow:
+    0 0 30px rgba(255,255,255,.08),
+    0 0 60px rgba(210,35,65,.15),
+    inset 0 0 40px rgba(255,255,255,.03);
+  animation: enter 1.5s ease;
+  backdrop-filter: blur(3px);
+}
+
+.card::before {
+  content: "✦";
+  position: absolute;
+  top: -18px;
+  left: 25px;
+  color: var(--pink);
+  font-size: 24px;
+  text-shadow: 0 0 15px red;
+}
+
+.card::after {
+  content: "✦";
+  position: absolute;
+  bottom: -18px;
+  right: 25px;
+  color: var(--pink);
+  font-size: 24px;
+  text-shadow: 0 0 15px red;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(40px) scale(.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Ribbon banner top */
+.ribbon-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 30px;
+  margin-bottom: 15px;
+  position: relative;
+  background: linear-gradient(90deg, transparent, #d4d0d5, #f3f0f2, #d4d0d5, transparent);
+  color: #17151a;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(255,255,255,.2);
+  clip-path: polygon(0 0, 100% 0, 98% 50%, 100% 100%, 0 100%, 2% 50%);
+}
+
+.ribbon-top::before {
+  content: "👑";
+  position: absolute;
+  left: 8px;
+  top: -12px;
+  font-size: 22px;
+  filter: drop-shadow(0 0 5px silver);
+}
+
+/* Main title */
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: clamp(38px, 8vw, 68px);
+  line-height: 1.15;
+  color: #fff;
+  text-shadow:
+    0 0 3px #fff,
+    0 0 10px #bbb,
+    0 0 25px #d4d0d5,
+    0 0 50px #9c3448;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Red brush stroke behind nickname */
+.nickname-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 12px 0 22px;
+  padding: 5px 40px;
+}
+
+.nickname-bg {
+  position: absolute;
+  inset: -5px -20px;
+  background: radial-gradient(ellipse at center, #a31e35 0%, #6e1322 60%, transparent 100%);
+  opacity: 0.7;
+  filter: blur(2px);
+  transform: rotate(-1deg) skewX(-5deg);
+  z-index: -1;
+}
+
+.nickname {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 15px #ff3045, 0 0 30px #ff3045;
+  letter-spacing: 2px;
+}
+
+/* Description text with side ornaments */
+.description-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.ornament {
+  color: #bbb;
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+.description {
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: 600;
+  line-height: 1.6;
+  color: #f0e9ec;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+
+/* Heart divider */
+.heart-line {
+  margin: 15px auto;
+  color: #ff3045;
+  font-size: 24px;
+  letter-spacing: 10px;
+  text-shadow: 0 0 15px red, 0 0 30px red;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+
+/* Red banner for secret question */
+.secret-title {
+  display: inline-block;
+  padding: 10px 35px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: clamp(18px, 3.5vw, 22px);
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(90deg, transparent, #8b1528, #b8223a, #8b1528, transparent);
+  text-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 20px rgba(255,48,69,0.5);
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 98% 50%, 100% 100%, 0 100%, 2% 50%);
+  letter-spacing: 1px;
+}
+
+/* Input wrap */
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid #a8a5ad;
+  border-radius: 40px;
+  background: rgba(0,0,0,.85);
+  padding: 5px 18px;
+  box-shadow: 0 0 20px rgba(255,255,255,.15),
+              0 0 15px rgba(255,30,70,.2),
+              inset 0 0 10px rgba(0,0,0,0.5);
+  transition: .3s;
+  margin-bottom: 22px;
+}
+
+.input-wrap:focus-within {
+  border-color: #ff647b;
+  box-shadow: 0 0 25px rgba(255,50,85,.6), 0 0 10px rgba(255,255,255,.3);
+}
+
+.lock {
+  font-size: 22px;
+  margin-right: 12px;
+  filter: drop-shadow(0 0 5px #ff6378);
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: 'Playfair Display', serif;
+}
+
+input::placeholder {
+  color: #9a959e;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.eye {
+  border: none;
+  background: none;
+  color: #ccc;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.eye:hover {
+  color: #ff6378;
+}
+
+/* Unlock button */
+.unlock {
+  width: 85%;
+  max-width: 420px;
+  padding: 20px 15px;
+  margin-top: 5px;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 50px;
+  color: #17151a;
+  background: linear-gradient(120deg, #b8b5bc, #ffffff, #b8b5bc, #ffffff, #b8b5bc);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(13px, 2.5vw, 16px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 
+    0 0 20px rgba(255,255,255,.3),
+    0 0 30px rgba(255,30,70,.35),
+    inset 0 0 10px rgba(255,255,255,.5);
+  transition: .3s;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.unlock:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 40px #ff526b, 0 0 20px #fff;
+}
+
+/* Message */
+#message {
+  min-height: 25px;
+  margin-top: 18px;
+  color: #ff9aaa;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 1px;
+}
+
+/* Hint */
+.hint {
+  margin-top: 12px;
+  font-family: 'Dancing Script', cursive;
+  color: #ccc;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  margin-top: 25px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 2;
+  color: #e0dce2;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Envelope screen */
+#envelopeScreen {
+  display: none;
+}
+
+.envelope-icon {
+  font-size: 110px;
+  margin: 30px 0;
+  cursor: pointer;
+  display: inline-block;
+  filter: drop-shadow(0 0 25px #ff526b) drop-shadow(0 0 50px rgba(255,48,69,0.5));
+  animation: envelopeFloat 2.5s infinite ease-in-out;
+  transition: 0.3s;
+}
+
+.envelope-icon:hover {
+  transform: scale(1.1);
+}
+
+@keyframes envelopeFloat {
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.envelope-heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  color: white;
+  text-shadow: 0 0 20px #ff526b, 0 0 40px #ff3045;
+  margin-bottom: 15px;
+}
+
+@media(max-width: 768px) {
+  .polaroid-left, .polaroid-right { display: none; }
+  .sticky-note, .sticky-note-bottom { display: none; }
+  .lantern, .book-rose, .pen { display: none; }
+  .card { padding: 35px 20px; }
+}
+
+@media(max-width: 550px) {
+  .card { padding: 30px 16px; }
+  .description { font-size: 15px; }
+  .doodle { font-size: 22px; }
+  .unlock { width: 95%; font-size: 12px; padding: 16px; }
+  .ribbon-top { font-size: 9px; letter-spacing: 2px; padding: 6px 20px; }
+  .ribbon-top::before { font-size: 16px; left: 4px; top: -8px; }
+  .nickname-wrap { padding: 5px 20px; }
+  .secret-title { padding: 8px 15px; font-size: 16px; }
+}
+
+/* ===================================
+   HADI'S INTERACTIVE SCRAPBOOK LETTER
+=================================== */
+
+.letter-screen {
+  display: none;
+  width: 100%;
+  padding: 35px 12px;
+  position: relative;
+  z-index: 5;
+  animation: letterAppear 1.2s ease;
+}
+
+@keyframes letterAppear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.letter-book {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px;
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),
+    #111014;
+  background-size: 27px 27px;
+  border: 1px solid #bcb7c2;
+  box-shadow:
+    0 0 30px rgba(255,255,255,.12),
+    0 0 45px rgba(220,30,60,.2);
+}
+
+.letter-top {
+  text-align: center;
+  padding: 15px 10px 35px;
+}
+
+.letter-top > p:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #c9c4ce;
+}
+
+.letter-top h2 {
+  margin: 15px 0;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(30px,5vw,54px);
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 0 15px #ddd, 0 0 30px #a52b42;
+}
+
+.letter-title {
+  display: inline-block;
+  padding: 8px 35px;
+  color: white;
+  background: linear-gradient(90deg,transparent,#922039,transparent);
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+}
+
+.letter-subtitle {
+  margin-top: 15px;
+  color: #c8c1cb;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.memory-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.35fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.memory-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 8px;
+}
+
+.memory-photo {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  padding: 10px 10px 18px;
+  background: #f2eeec;
+  color: #201b20;
+  box-shadow: 0 8px 25px rgba(0,0,0,.6);
+  transition: transform .4s ease;
+  animation: photoAppear .9s ease both;
+}
+
+.memory-photo:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+.first-photo {
+  transform: rotate(-4deg);
+  animation-delay: .2s;
+}
+
+.second-photo {
+  transform: rotate(3deg);
+  animation-delay: .5s;
+}
+
+.third-photo {
+  transform: rotate(-2deg);
+  animation-delay: .8s;
+}
+
+@keyframes photoAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px) rotate(0);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.memory-photo img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: 1px solid #d5cdd0;
+}
+
+.memory-photo p {
+  padding-top: 13px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.photo-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  width: 75px;
+  height: 23px;
+  background: rgba(190,185,195,.7);
+  z-index: 2;
+}
+
+.birthday-paper {
+  position: relative;
+  padding: 35px 30px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 36px,
+      rgba(100,70,70,.13) 37px
+    ),
+    linear-gradient(135deg,#f4e9d9,#e9d9c8);
+  color: #292127;
+  box-shadow: 0 8px 25px rgba(0,0,0,.5);
+  line-height: 1.85;
+}
+
+.birthday-paper h3 {
+  margin-bottom: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(28px,4vw,39px);
+  color: #8c2036;
+}
+
+.birthday-paper p {
+  margin-bottom: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.paper-decoration {
+  text-align: right;
+  color: #a52b42;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.bottom-decoration {
+  text-align: center;
+  margin: 25px 0 0;
+}
+
+.paper-highlight {
+  padding: 7px 4px;
+  background: linear-gradient(
+    transparent 45%,
+    rgba(216,70,95,.25) 45%,
+    rgba(216,70,95,.25) 90%,
+    transparent 90%
+  );
+  font-weight: 800 !important;
+}
+
+.birthday-line {
+  margin-top: 25px;
+  text-align: center;
+  color: #a01e39;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.letter-signature {
+  margin-top: 28px;
+  text-align: right;
+  color: #8c2036;
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.journal-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #d8d1dc;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* Hide the welcome-page scrapbook props
+   while the actual letter is open */
+
+body.letter-open .scrapbook,
+body.letter-open > div[style*="position: fixed"] {
+  display: none;
+}
+
+/* Tablet and mobile */
+
+@media(max-width:700px) {
+
+  .letter-book {
+    padding: 18px 12px;
+  }
+
+  .memory-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .memory-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 12px;
+  }
+
+  .memory-photo {
+    padding: 7px 7px 12px;
+  }
+
+  .memory-photo img {
+    height: 210px;
+  }
+
+  .memory-photo p {
+    font-size: 17px;
+  }
+
+  .third-photo {
+    grid-column: 1 / -1;
+    width: 75%;
+    justify-self: center;
+  }
+
+  .birthday-paper {
+    padding: 25px 18px;
+  }
+
+  .birthday-paper p {
+    font-size: 14px;
+  }
+
+  .birthday-line {
+    font-size: 15px;
+  }
+}
+
+@media(max-width:380px) {
+  .memory-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .third-photo {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .memory-photo img {
+    height: 280px;
+  }
+}
+
+/* ===================================
+   EXTRA LUXURY SCRAPBOOK DECORATIONS
+=================================== */
+
+/* Beautiful double border around journal */
+
+.letter-book {
+  border: 2px solid #c4bdca !important;
+  outline: 1px solid rgba(220, 50, 80, .45);
+  outline-offset: 7px;
+
+  box-shadow:
+    0 0 25px rgba(255,255,255,.17),
+    0 0 45px rgba(220,30,60,.22),
+    inset 0 0 35px rgba(255,255,255,.035);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative corner stars */
+
+.letter-book::before {
+  content: "✧  ♡  ✦";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #e8b7c0;
+  font-size: 19px;
+  letter-spacing: 7px;
+  text-shadow: 0 0 12px #ff526b;
+  pointer-events: none;
+}
+
+.letter-book::after {
+  content: "✦  ♡  ✧";
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  color: #d7d1df;
+  font-size: 19px;
+  letter-spacing: 7px;
+  text-shadow: 0 0 12px white;
+  pointer-events: none;
+}
+
+/* More beautiful heading */
+
+.letter-top h2 {
+  text-shadow:
+    0 0 5px white,
+    0 0 15px #c5bdcc,
+    0 0 28px #d92d4d;
+  letter-spacing: 3px;
+}
+
+/* Silver and red decorative line */
+
+.letter-subtitle::before,
+.letter-subtitle::after {
+  content: " ✧ ";
+  color: #ff647d;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+/* More premium Polaroid frames */
+
+.memory-photo {
+  border: 1px solid #d7cdd1;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.55),
+    0 0 12px rgba(255,255,255,.12);
+}
+
+.memory-photo img {
+  border: 2px solid #fff;
+  transition: transform .5s ease;
+}
+
+.memory-photo:hover img {
+  transform: scale(1.025);
+}
+
+/* Tiny decorative hearts under photos */
+
+.memory-photo p::before {
+  content: "♥  ";
+  color: #c92e49;
+}
+
+.memory-photo p::after {
+  content: "  ♥";
+  color: #c92e49;
+}
+
+/* Make paper look like a handmade journal */
+
+.birthday-paper {
+  border: 1px solid #c9b6a7;
+  outline: 1px dashed rgba(125, 40, 50, .35);
+  outline-offset: -8px;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.4),
+    inset 0 0 25px rgba(145,90,65,.08);
+}
+
+/* Beautiful letter heading */
+
+.birthday-paper h3 {
+  text-shadow: 1px 2px 2px rgba(130,30,50,.15);
+}
+
+/* Red highlighted birthday wish */
+
+.birthday-line {
+  padding: 12px 5px;
+  border-top: 2px dashed #a72a40;
+  border-bottom: 2px dashed #a72a40;
+  text-shadow: 0 1px 1px rgba(150,30,50,.15);
+}
+
+/* Signature decoration */
+
+.letter-signature::after {
+  content: " ♡ ✧";
+  color: #c02d49;
+}
+
+/* Decorative paper corners */
+
+.birthday-paper::before {
+  content: "✿";
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #a52b42;
+  font-size: 25px;
+}
+
+.birthday-paper::after {
+  content: "♡";
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  color: #a52b42;
+  font-size: 25px;
+}
+
+/* CLEAR WRONG PASSWORD MESSAGE */
+
+#message {
+  min-height: 35px;
+  margin-top: 20px;
+  padding: 9px 12px;
+
+  color: #ff7188 !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+
+  letter-spacing: .4px;
+  line-height: 1.6;
+
+  text-shadow:
+    0 0 5px rgba(255,70,100,.6),
+    0 0 12px rgba(255,40,80,.35);
+
+  background: rgba(120,15,35,.15);
+  border-radius: 10px;
+}
+
+/* Wrong password message visibility */
+
+#message:not(:empty) {
+  animation: messagePop .35s ease;
+}
+
+@keyframes messagePop {
+  from {
+    opacity: 0;
+    transform: scale(.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =================================
+   HADI SCRAPBOOK - FINAL DECORATIONS
+================================= */
+
+.letter-book {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #c4bdca;
+  outline: 1px solid rgba(220,50,80,.5);
+  outline-offset: 5px;
+  box-shadow:
+    0 0 25px rgba(255,255,255,.2),
+    0 0 45px rgba(220,30,60,.3);
+}
+
+/* Keep original content above background decorations */
+
+.letter-top,
+.memory-layout,
+.journal-footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Red satin ribbon */
+
+.journal-ribbon {
+  width: 45%;
+  height: 9px;
+  margin: 8px auto 25px;
+  position: relative;
+  background: linear-gradient(
+    90deg,#690b20,#fa405d,#a20e2b,#fa405d,#690b20
+  );
+  box-shadow: 0 0 15px #c91d40;
+}
+
+.journal-ribbon span {
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 42px;
+}
+
+.book-accent {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.book-star {
+  color: #fff3cc;
+  font-size: 25px;
+  text-shadow: 0 0 7px #fff, 0 0 16px #ffd36b, 0 0 27px #ff6378;
+  animation: bookStarGlow 2.8s ease-in-out infinite;
+}
+
+.book-star-one {
+  top: 28px;
+  left: 16%;
+}
+
+.book-star-two {
+  top: 28px;
+  right: 16%;
+  animation-delay: .8s;
+}
+
+.book-star-three {
+  top: 48%;
+  left: 15px;
+  font-size: 20px;
+  animation-delay: 1.4s;
+}
+
+.book-star-four {
+  top: 48%;
+  right: 15px;
+  font-size: 20px;
+  animation-delay: .4s;
+}
+
+.book-bow {
+  color: #ff8296;
+  font-size: 30px;
+  filter: drop-shadow(0 0 6px rgba(255, 91, 126, .9));
+  animation: bookBowFloat 3.8s ease-in-out infinite;
+}
+
+.book-bow-left {
+  top: 22px;
+  left: 8%;
+  transform: rotate(-12deg);
+}
+
+.book-bow-right {
+  top: 22px;
+  right: 8%;
+  transform: rotate(12deg);
+  animation-delay: 1.2s;
+}
+
+@keyframes bookStarGlow {
+  0%,100% { opacity: .55; transform: scale(.85) rotate(-8deg); }
+  50% { opacity: 1; transform: scale(1.15) rotate(12deg); }
+}
+
+@keyframes bookBowFloat {
+  0%,100% { translate: 0 0; }
+  50% { translate: 0 -5px; }
+}
+
+/* Sticky notes */
+
+.journal-note {
+  position: absolute;
+  z-index: 4;
+  width: 125px;
+  padding: 12px;
+  background: #f1dfc9;
+  color: #38242a;
+  font-family: 'Dancing Script', cursive;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: 3px 6px 14px #0009;
+}
+
+.note-left {
+  top: 145px;
+  left: 8px;
+  transform: rotate(-7deg);
+}
+
+.note-right {
+  top: 145px;
+  right: 8px;
+  transform: rotate(6deg);
+  text-align: center;
+}
+
+/* Floating doodles */
+
+.journal-doodle {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.crown-doodle {
+  top: 230px;
+  left: 12px;
+  font-size: 42px;
+  color: #f4e9ef;
+  text-shadow: 0 0 15px white;
+  animation: crownFloat 4.2s ease-in-out infinite;
+}
+
+.moon-doodle {
+  top: 230px;
+  right: 15px;
+  font-size: 48px;
+  color: white;
+  text-shadow: 0 0 15px white;
+  animation: moonSway 5s ease-in-out infinite;
+}
+
+.heart-doodle {
+  top: 52%;
+  left: 12px;
+  font-size: 48px;
+  color: #ff405d;
+  text-shadow: 0 0 15px red;
+  animation: doodleHeartbeat 2.8s ease-in-out infinite;
+}
+
+.star-doodle {
+  top: 55%;
+  right: 12px;
+  font-size: 42px;
+  color: silver;
+  text-shadow: 0 0 15px white;
+  animation: doodleSparkle 3.2s ease-in-out infinite;
+}
+
+.cake-doodle {
+  bottom: 25px;
+  left: 10px;
+  font-size: 43px;
+  animation: journalFloat 4.6s ease-in-out infinite;
+}
+
+.rose-doodle {
+  bottom: 15px;
+  left: 46%;
+  font-size: 48px;
+  animation: roseSway 4.8s ease-in-out infinite;
+}
+
+.envelope-doodle {
+  bottom: 25px;
+  right: 12px;
+  font-size: 40px;
+  animation: envelopeBob 3.7s ease-in-out infinite;
+}
+
+.butterfly-doodle {
+  top: 70%;
+  right: 12px;
+  font-size: 35px;
+  animation: butterflyFlutter 2.4s ease-in-out infinite;
+}
+
+@keyframes journalFloat {
+  0%,100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(6deg);
+  }
+}
+
+@keyframes crownFloat {
+  0%,100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-9px) rotate(5deg); }
+}
+
+@keyframes moonSway {
+  0%,100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-7px) rotate(8deg); }
+}
+
+@keyframes doodleHeartbeat {
+  0%,100% { transform: scale(1) rotate(-5deg); }
+  40%,60% { transform: scale(1.12) rotate(4deg); }
+}
+
+@keyframes doodleSparkle {
+  0%,100% { transform: scale(.9) rotate(-8deg); opacity: .7; }
+  50% { transform: scale(1.15) rotate(18deg); opacity: 1; }
+}
+
+@keyframes roseSway {
+  0%,100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-8px) rotate(7deg); }
+}
+
+@keyframes envelopeBob {
+  0%,100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-9px) rotate(-4deg); }
+}
+
+@keyframes butterflyFlutter {
+  0%,100% { transform: translate(0,0) rotate(-8deg); }
+  50% { transform: translate(-5px,-8px) rotate(9deg); }
+}
+
+/* Beautiful red and silver title */
+
+.letter-top h2 {
+  text-shadow:
+    0 0 5px white,
+    0 0 15px #ddd,
+    0 0 30px #d92840;
+}
+
+/* Pink highlighter */
+
+.paper-highlight {
+  background: linear-gradient(
+    transparent 35%,
+    rgba(240,130,145,.45) 35%,
+    rgba(240,130,145,.45) 90%,
+    transparent 90%
+  );
+  border-radius: 5px;
+  padding: 8px;
+}
+
+/* Handmade paper details */
+
+.birthday-paper {
+  border: 1px solid #c9b6a7;
+  outline: 1px dashed rgba(160,35,55,.4);
+  outline-offset: -9px;
+  clip-path: polygon(
+    1% 0, 99% 0,
+    100% 2%, 98.8% 4%, 100% 6%, 98.7% 8%, 100% 10%,
+    98.8% 12%, 100% 14%, 98.7% 16%, 100% 18%, 98.8% 20%,
+    100% 22%, 98.7% 24%, 100% 26%, 98.8% 28%, 100% 30%,
+    98.7% 32%, 100% 34%, 98.8% 36%, 100% 38%, 98.7% 40%,
+    100% 42%, 98.8% 44%, 100% 46%, 98.7% 48%, 100% 50%,
+    98.8% 52%, 100% 54%, 98.7% 56%, 100% 58%, 98.8% 60%,
+    100% 62%, 98.7% 64%, 100% 66%, 98.8% 68%, 100% 70%,
+    98.7% 72%, 100% 74%, 98.8% 76%, 100% 78%, 98.7% 80%,
+    100% 82%, 98.8% 84%, 100% 86%, 98.7% 88%, 100% 90%,
+    98.8% 92%, 100% 94%, 98.7% 96%, 100% 98%, 99% 100%,
+    1% 100%,
+    0 98%, 1.2% 96%, 0 94%, 1.3% 92%, 0 90%,
+    1.2% 88%, 0 86%, 1.3% 84%, 0 82%, 1.2% 80%,
+    0 78%, 1.3% 76%, 0 74%, 1.2% 72%, 0 70%,
+    1.3% 68%, 0 66%, 1.2% 64%, 0 62%, 1.3% 60%,
+    0 58%, 1.2% 56%, 0 54%, 1.3% 52%, 0 50%,
+    1.2% 48%, 0 46%, 1.3% 44%, 0 42%, 1.2% 40%,
+    0 38%, 1.3% 36%, 0 34%, 1.2% 32%, 0 30%,
+    1.3% 28%, 0 26%, 1.2% 24%, 0 22%, 1.3% 20%,
+    0 18%, 1.2% 16%, 0 14%, 1.3% 12%, 0 10%,
+    1.2% 8%, 0 6%, 1.3% 4%, 0 2%
+  );
+  box-shadow:
+    0 10px 25px #0006,
+    inset 0 0 25px rgba(145,90,65,.08);
+  filter: drop-shadow(0 10px 8px rgba(0,0,0,.35));
+}
+
+.birthday-paper h3 {
+  text-shadow: 1px 2px 3px rgba(130,30,50,.2);
+}
+
+/* Photo frames */
+
+.memory-photo {
+  border: 2px solid #eee5e4;
+  box-shadow:
+    0 8px 25px #0009,
+    0 0 12px rgba(255,255,255,.15);
+}
+
+.memory-photo p::before {
+  content: "♥ ";
+  color: #c92e49;
+}
+
+.memory-photo p::after {
+  content: " ♥";
+  color: #c92e49;
+}
+
+/* Signature */
+
+.letter-signature {
+  text-shadow: 0 1px 2px rgba(150,30,50,.2);
+}
+
+/* Mobile layout */
+
+@media(max-width:700px) {
+  .journal-note {
+    display: none;
+  }
+
+  .journal-doodle {
+    display: none;
+  }
+
+  .journal-ribbon {
+    width: 60%;
+  }
+
+  .book-star-three,
+  .book-star-four {
+    display: none;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .doodle,
+  .journal-doodle,
+  .star,
+  .book-star,
+  .book-bow {
+    animation: none !important;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<!-- Scrapbook elements -->
+<div class="scrapbook">
+  <!-- Sticky notes -->
+  <div class="sticky-note">
+    Some<br>people are<br>just meant<br>to be... ♥
+  </div>
+
+  <div class="sticky-note-bottom">
+    Happy<br>Birthday<br>My Love ♥
+  </div>
+
+  <!-- Polaroids -->
+  <div class="polaroid polaroid-left">
+    <div class="img-placeholder-1"></div>
+  </div>
+
+  <div class="polaroid polaroid-right">
+    <div class="img-placeholder-2"></div>
+  </div>
+
+  <!-- Lantern -->
+  <div class="lantern">
+    <div class="lantern-handle"></div>
+    <div class="lantern-top"></div>
+    <div class="lantern-body">
+      <div class="lantern-glow"></div>
+    </div>
+    <div class="lantern-base"></div>
+  </div>
+
+  <!-- Book and rose -->
+  <div class="book-rose">
+    <div class="book"></div>
+    <div class="rose">🌹</div>
+  </div>
+
+  <!-- Pen -->
+  <div class="pen">🖊️</div>
+</div>
+
+<!-- Floating doodles -->
+<div class="doodle d1">♡</div>
+<div class="doodle d2">✧</div>
+<div class="doodle d3">🌹</div>
+<div class="doodle d4">♥</div>
+<div class="doodle d5">✦</div>
+<div class="doodle d6">☾</div>
+
+<!-- Top right text -->
+<div style="position: fixed; top: 6%; right: 5%; z-index: 3; text-align: right; font-family: 'Dancing Script', cursive; font-size: 18px; color: #e0dce2; opacity: 0.8; line-height: 1.3; pointer-events: none;">
+  Big dreams<br>
+  +<br>
+  You<br>
+  =<br>
+  My favorite<br>
+  story ♡
+</div>
+
+<div class="container">
+
+  <!-- WELCOME SCREEN -->
+  <div class="card" id="welcomeScreen">
+
+    <div class="ribbon-top">
+      A LITTLE SECRET FOR YOU
+    </div>
+
+    <h1>MY CUTIE DUDU</h1>
+
+    <div class="nickname-wrap">
+      <div class="nickname-bg"></div>
+      <div class="nickname">My JAANU Baby ♡</div>
+    </div>
+
+    <div class="description-wrap">
+      <span class="ornament">⚜</span>
+      <p class="description">
+        Someone special has prepared<br>
+        something for you...
+      </p>
+      <span class="ornament">⚜</span>
+    </div>
+
+    <div class="heart-line">— ♡ ✧ ♡ —</div>
+
+    <div class="secret-title">
+      Do you know our secret word?
+    </div>
+
+    <div class="input-wrap">
+      <span class="lock">♙</span>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter secret password..."
+        autocomplete="off"
+      >
+
+      <button class="eye" onclick="togglePassword()" type="button">
+        ◉
+      </button>
+    </div>
+
+    <button class="unlock" onclick="unlockSurprise()">
+      UNLOCK MY SURPRISE ♡
+    </button>
+
+    <p id="message"></p>
+
+    <p class="hint">
+      ♡ Hint: It's the word we always say to each other...
+    </p>
+
+    <div class="heart-line">— ♡ —</div>
+
+    <div class="footer">
+      MADE WITH LOVE,<br>
+      BY YOUR BUBU ♡
+    </div>
+
+  </div>
+
+  <!-- ENVELOPE SCREEN -->
+
+  <div class="card" id="envelopeScreen">
+
+    <div class="ribbon-top">YOUR SURPRISE IS HERE</div>
+
+    <h2 class="envelope-heading">
+      For My Favourite Boy
+    </h2>
+
+    <div class="envelope-icon" onclick="openLetter()">
+      💌
+    </div>
+
+    <p class="description" style="margin-bottom: 20px;">
+      A little letter, filled with lots of love.<br>
+      For You, My DUDU.
+    </p>
+
+    <button class="unlock" onclick="openLetter()">
+      OPEN YOUR LETTER ♡
+    </button>
+
+    <p class="footer" style="margin-top: 30px;">
+      FOREVER YOUR JAAN ❤️
+    </p>
+
+  </div>
+
+<!-- ==============================
+     HADI'S SCRAPBOOK BIRTHDAY LETTER
+================================ -->
+
+<div id="letterScreen" class="letter-screen">
+
+  <div class="letter-book">
+
+<!-- EXTRA SCRAPBOOK DECORATIONS -->
+
+<div class="journal-ribbon">🎀</div>
+<span class="book-accent book-star book-star-one" aria-hidden="true">✦</span>
+<span class="book-accent book-star book-star-two" aria-hidden="true">✧</span>
+<span class="book-accent book-star book-star-three" aria-hidden="true">✧</span>
+<span class="book-accent book-star book-star-four" aria-hidden="true">✦</span>
+<span class="book-accent book-bow book-bow-left" aria-hidden="true">🎀</span>
+<span class="book-accent book-bow book-bow-right" aria-hidden="true">🎀</span>
+
+<div class="journal-note note-left">
+  Some people<br>
+  are just meant<br>
+  to be... ♡
+</div>
+
+<div class="journal-note note-right">
+  Big dreams<br>
+  + You<br>
+  = My favourite<br>
+  story ♡
+</div>
+
+<div class="journal-doodle crown-doodle">♕</div>
+<div class="journal-doodle moon-doodle">☾</div>
+<div class="journal-doodle heart-doodle">♡</div>
+<div class="journal-doodle star-doodle">✧</div>
+
+<div class="journal-doodle cake-doodle">🎂</div>
+<div class="journal-doodle rose-doodle">🌹</div>
+<div class="journal-doodle envelope-doodle">💌</div>
+<div class="journal-doodle butterfly-doodle">🦋</div>
+
+<!-- END DECORATIONS -->
+
+    <div class="letter-top">
+      <p>MY LITTLE MEMORY JOURNAL</p>
+      <h2>MY CHERISHED DUDU</h2>
+      <div class="letter-title">Chapter 16 ♡</div>
+      <p class="letter-subtitle">A photo journal of our beautiful bond</p>
+    </div>
+
+    <div class="memory-layout">
+
+      <!-- LEFT: YOUR THREE ORIGINAL PHOTOS -->
+
+      <div class="memory-photos">
+
+        <div class="memory-photo first-photo">
+          <span class="photo-tape"></span>
+          <img src="Images/photo1.jpeg" alt="Our memory one">
+          <p>My favourite person ♡</p>
+        </div>
+
+        <div class="memory-photo second-photo">
+          <span class="photo-tape"></span>
+          <img src="Images/photo2.jpeg" alt="Our memory two">
+          <p>My forever happiness ♡</p>
+        </div>
+
+        <div class="memory-photo third-photo">
+          <span class="photo-tape"></span>
+          <img src="Images/photo3.jpeg" alt="Our memory three">
+          <p>My precious DUDU ♡</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: BIRTHDAY LETTER -->
+
+      <article class="birthday-paper">
+
+        <div class="paper-decoration">✦ ♡ ✦</div>
+
+        <h3>Dear Jaanu, My Cutie Dudu!</h3>
+
+        <p>
+          Happiest 16th Birthday, my JAAN! ❤️
+        </p>
+
+        <p>
+          Pata hai Dudu, kabhi kabhi mujhe samajh nahi aata
+          ke main tumhein kitna special feel karwaun,
+          because words are never enough to explain
+          how much you mean to me.
+        </p>
+
+        <p>
+          You're not just my brother, you're my favourite
+          person, my little happiness, my biggest comfort
+          and one of the most beautiful blessings in my life.
+        </p>
+
+        <p>
+          Humari funny conversations, childish fights,
+          random jokes, childhood memories aur woh
+          choti choti moments — I treasure them all.
+        </p>
+
+        <p class="paper-highlight">
+          Distance may separate our cities, but it will
+          never change the special place you have
+          in my heart. ♡
+        </p>
+
+        <p>
+          My jaan, I pray that this new chapter brings you
+          endless happiness, success, peace and everything
+          your beautiful heart wishes for.
+        </p>
+
+        <p>
+          Hamesha haste rehna, apne dreams follow karna
+          aur kabhi ye mat bhoolna ke tumhari JAAN
+          hamesha tumhare liye dua karti rahegi.
+        </p>
+
+        <p>
+          And no matter how grown-up you become,
+          mere liye tum hamesha mere cutie DUDU rahoge.
+        </p>
+
+        <div class="birthday-line">
+          HAPPY 16TH BIRTHDAY, MY LOVE! ❤️
+        </div>
+
+        <div class="letter-signature">
+          Lots and lots of love,<br>
+          Your BUBU ♡
+        </div>
+
+        <div class="paper-decoration bottom-decoration">
+          ♡ ✦ ♡
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="journal-footer">
+      MADE WITH LOVE, JUST FOR YOU ♡
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<script>
+
+// Create glowing stars
+const stars = document.getElementById("stars");
+
+for (let i = 0; i < 110; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+
+  star.style.left = Math.random() * 100 + "%";
+  star.style.top = Math.random() * 100 + "%";
+  star.style.animationDelay = Math.random() * 5 + "s";
+  star.style.animationDuration = (1.5 + Math.random() * 3) + "s";
+
+  stars.appendChild(star);
+}
+
+// Show or hide password
+function togglePassword() {
+  const input = document.getElementById("password");
+
+  input.type = input.type === "password"
+    ? "text"
+    : "password";
+}
+
+// Password interaction
+function unlockSurprise() {
+
+  const password = document
+    .getElementById("password")
+    .value.trim().toUpperCase();
+
+  const message = document.getElementById("message");
+
+  if (password === "JAAN") {
+
+    message.innerText =
+      "Awww DUDU! You found our secret! ❤️";
+
+    setTimeout(() => {
+
+      document.getElementById("welcomeScreen").style.display = "none";
+
+      const envelope = document.getElementById("envelopeScreen");
+      envelope.style.display = "block";
+      envelope.style.animation = "enter 1.5s ease";
+
+    }, 1000);
+
+  } else {
+
+    message.innerText =
+      "Oops DUDU! Secret word bhool gaye? 😭❤️";
+
+  }
+}
+
+// Enter key also unlocks
+document.getElementById("password").addEventListener(
+  "keydown",
+  function(event) {
+    if (event.key === "Enter") {
+      unlockSurprise();
+    }
+  }
+);
+
+// Temporary letter button
+
+function openLetter() {
+
+  const envelope = document.getElementById("envelopeScreen");
+  const letter = document.getElementById("letterScreen");
+
+  // Hide the envelope
+  envelope.style.display = "none";
+
+  // Show the scrapbook birthday letter
+  letter.style.display = "block";
+
+  // Hide the welcome-page decorations
+  document.body.classList.add("letter-open");
+
+  // Reveal the letter from the top
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+</script>
+
+</body>
+</html>
