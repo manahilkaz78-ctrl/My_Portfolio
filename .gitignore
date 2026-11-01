@@ -11,11 +11,12 @@ node_modules/
 *.key
 *.cert
 
-# Archives
+# Archives & Dumps
 *.rar
 *.zip
 *.7z
 *.tar.gz
+*.dmp
 
 # System & temporary files
 .DS_Store
